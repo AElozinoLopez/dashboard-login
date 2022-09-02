@@ -1,0 +1,52 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E5E5E5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {    
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2148C0;
+    width: 70%;
+    height: 80vh;
+    margin: 50px auto;
+}
+
+.cart_container {
+    border: 1px solid yellow;
+    width: 119px;
+    height: 97px;
+    margin-bottom: 71px;
+}
+
+object[data="images/cart.svg"] {
+    width: 100px;
+    height: 90px;
+}
+
+.username, .password, .login_button {
+    width: 250px;
+    height: 40px;
+    border: 1px solid #fff;
+    margin-bottom: 20px;   
+}
+
+img {
+    margin-left: 12px;
+    margin-top: 7px;
+}
+
+input[type="text"] {
+
+}
+
+
