@@ -10,43 +10,183 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-main {    
-    display: flex;    
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+main {     
+    display: flex;
+    flex-direction: column;          
     background-color: #2148C0;
     width: 70%;
     height: 80vh;
     margin: 50px auto;
+    border-radius: 2px;
 }
 
-.cart_container {
-    border: 1px solid yellow;
+.container {    
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 1;    
+}
+
+.cart_container {    
     width: 119px;
     height: 97px;
-    margin-bottom: 71px;
+    margin: 35px auto;
+    /* margin-top: 50px; */
 }
 
 object[data="images/cart.svg"] {
-    width: 100px;
-    height: 90px;
+    width: 90%;
+    height: 80%;
 }
 
-.username, .password, .login_button {
+.username, .password {
     width: 250px;
     height: 40px;
     border: 1px solid #fff;
-    margin-bottom: 20px;   
+    border-radius: 3px;
+    margin-bottom: 20px;  
 }
 
+/* This img is input field icons */
 img {
     margin-left: 12px;
-    margin-top: 7px;
+    margin-top: 9px;
 }
 
-input[type="text"] {
+input[type="text"] {     
+    margin-left: 10px;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 0.875rem;
+    color: #fff;
+    border: none;
+    background-color: inherit;
+    text-align: left;
+    text-transform: uppercase;
+    /* padding-bottom: 10px; */
+}
 
+input:focus {
+    outline:none;
+}
+
+::placeholder {    
+    color: #fff;
+    font-weight: 200;
+    font-size: 0.875rem;
+    padding-bottom: 10px;
+    opacity: 0.5;
+    display: inline-block;
+    align-items: center;
+
+    /* The placeholder text gree centralize? To be reviewed later to fix bug */
+}  
+
+input[type="submit"] {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    color: #2148C0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 4px #000);
+}
+
+.login_button {
+    border: none;   
+    height: 40px;
+}
+
+input[type="submit"]:hover {
+    background-color: #f5f5f5;    
+}
+
+.forgot_password_link {    
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.forgot_password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot_password_link:hover {
+    text-decoration: underline;
 }
 
 
+/* This is where the cicles are created. */
+.circle-container {
+    display: flex;
+    align-content: flex-end;    
+    justify-content: flex-start;
+}
+
+.inner_half_circle_design {
+    position: absolute;   
+    bottom: 73.5px; 
+    width: 8em;
+    height: 8em;
+    content: "";
+    background-color: #274FC7;
+    /* border: 25px solid #244BC5;
+    outline: 25px solid #274FC7; */
+    border-top-left-radius: 0;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 3;
+}
+
+.middle_half_circle_design {
+    position: absolute;
+    bottom: 73.5px;
+    width: 10em;
+    height: 10em;
+    content: "";
+    background-color: #244BC5;
+    z-index: 2;    
+    border-top-left-radius: 0;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.outer_half_circle_design {
+    position: absolute;
+    bottom: 73.5px;
+    width: 12.5em;
+    height: 12.5em;
+    content: "";
+    background-color: #264ECA;
+    z-index: 1;    
+    border-top-left-radius: 0;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Wondering why lines 179 to 182 didn't work. For review */
+/* .container::after {
+    content: url(bg-mask.png);
+    z-index: 100;    
+} */
+
+
+.mask-image {     
+    width: 50%;
+    height: 80vh;
+    position: absolute;
+    bottom: 73.5px;   
+    margin-left: 127px;
+    
+}
